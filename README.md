@@ -2,14 +2,14 @@
 ### A new programming language.
 
 how to use stack:
+Paragraph:
+  - write code in test.stack
 
-write code in test.stack
-
-run "fullrun.py" to compile and run. (requires js2py)
-run "build.py" to only build
-run "compiler.py" to only compile.
-run "injector.py" to inject built code to js
-run "run.py" to run code. (requires js2py)
+  - run "fullrun.py" to compile, inject and run. (requires js2py) <br>
+  - run "build.py" to only compile and inject. <br>
+  - run "compiler.py" to only compile. <br>
+  - run "injector.py" to inject built code to js. <br>
+  - run "run.py" to run code. (requires js2py)<br><br>
 
 
 ```
