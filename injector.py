@@ -1,7 +1,7 @@
 file=open("test.stacked")
 js=open("js/frame/frame.js","r+")
 executableJS=open("js/build/build-stack.js","w")
-data=js.read().replace("\"/code-string\"",file.read())
+data=js.read().replace("{inject: \"/code-string\"}",file.read())
 executableJS.write(data)
 file.close()
 js.close()

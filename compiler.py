@@ -62,19 +62,23 @@ if read:
     prevline=-1
     line=0
     placed=False
+    # +str(value)
+    value=0
     for i in zip(ttype[1:],token[1:]):
         if i[1]==";":
             prevline=line
             line+=1
             placed=False
             buildfile.write("\t},\n")
+            value=0
         else:
             if not placed:
                 placed=True
                 buildfile.write("\t"+str(line)+":{\n")
             if i[0]=="int":
-                buildfile.write("\t\t"+i[0]+": "+i[1]+",\n")
+                buildfile.write("\t\t"+i[0]+"_"+str(value+1)+": "+i[1]+",\n")
             else:
-                buildfile.write("\t\t"+i[0]+": \""+i[1]+"\",\n")
+                buildfile.write("\t\t"+i[0]+"_"+str(value+1)+": \""+i[1]+"\",\n")
+            value+=1
 buildfile.write("}")
 buildfile.close()
